@@ -1,6 +1,9 @@
 #This Repo creates Keypair, Network, Subnet, Instances, Floating IP's, Security Grps, Volumes through TErraform on OSP Cloud.
 #For running it any separate OSP Cloud the credentials should be updates in the file terraform.tfvars.json at the start.
 
+# A private key id_rsa can be used to login into instances post creation, both RDP and ssh is allowed in the security groups.
+# A new Admin user is injected through cloud-init, if the image supports it. This user has sudo privileges and can be used to access the instance post creation
+
 The Std_node variable is an array to accomodate multiple types of instances.
 The count variable within an object of std_node variable, determines how many instances of the same type will be created.
 
